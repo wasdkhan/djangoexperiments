@@ -1,21 +1,25 @@
+<center>
+<img src="http://www.pediacities.com/wp-content/themes/pediacities/images/pediacities-logo-opt.png"/>
+<h1> Contact Us </h1>
 <form action="" method="POST">
     {% csrf_token %}
     
 <div class="fieldWrapper">
-    <label for="id_subject">Email subject:</label><br/>
+    <label for="id_subject">Email Subject:</label><br/>
     {{ form.subject }}
 </div>
 <div class="fieldWrapper">
-    <label for="id_message">Your message:</label><br/>
-    {{ form.message }}
-</div>
-<div class="fieldWrapper">
-    <label for="id_sender">Your email address:</label><br/>
+    <label for="id_sender">Your Email Address:</label><br/>
     {{ form.sender }}
 </div>
 <div class="fieldWrapper">
-    <label for="id_cc_myself">CC yourself?</label>
-    {{ form.cc_myself }}
+    <label for="id_message">Your Message:</label><br/>
+    {{ form.message }}
+</div>
+<div class="fieldWrapper">
+	{{ form.cc_myself }}
+    <label for="id_cc_myself">Email me a copy of my message.</label>
 </div>
     <input type="submit" value="Submit" />
 </form>
+</center>

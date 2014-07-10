@@ -2,9 +2,8 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
 from django.template import RequestContext
-from django.core.context_processors import csrf
 
-from contact.forms import NameForm, ContactForm
+from contact.forms import ContactForm
 
 def get_contact(request):
 	if request.method == 'POST':
@@ -15,7 +14,9 @@ def get_contact(request):
 		    sender = form.cleaned_data['sender']
 		    cc_myself = form.cleaned_data['cc_myself']
 
-		    recipients = ['mark.natividad@gmail.com']
+		    message = "From " + sender + ":\n" + message
+
+		    recipients = ['Bobbyjoe500@gmail.com']
 		    if cc_myself:
 		        recipients.append(sender)
 

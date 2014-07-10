@@ -1,0 +1,21 @@
+<form action="thanks/" method="post">
+    {% csrf_token %}
+    
+<div class="fieldWrapper">
+    <label for="id_subject">Email subject:</label><br/>
+    {{ form.subject }}
+</div>
+<div class="fieldWrapper">
+    <label for="id_message">Your message:</label><br/>
+    {{ form.message }}
+</div>
+<div class="fieldWrapper">
+    <label for="id_sender">Your email address:</label><br/>
+    {{ form.sender }}
+</div>
+<div class="fieldWrapper">
+    <label for="id_cc_myself">CC yourself?</label>
+    {{ form.cc_myself }}
+</div>
+    <input type="submit" value="Submit" />
+</form>

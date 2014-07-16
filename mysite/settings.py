@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'polls',
     'contact',
+    'contact_form'
 )
 
 MIDDLEWARE_CLASSES = (

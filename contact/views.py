@@ -16,7 +16,7 @@ def get_contact(request):
 
 		    message = "From " + sender + ":\n" + message
 
-		    recipients = ['Bobbyjoe500@gmail.com']
+		    recipients = ['samibaig@gmail.com']
 		    if cc_myself:
 		        recipients.append(sender)
 
@@ -29,5 +29,3 @@ def get_contact(request):
 
 def thanks(request):
     return HttpResponse("Thank you for sending your message. Your feedback is important to us.")
-
-
